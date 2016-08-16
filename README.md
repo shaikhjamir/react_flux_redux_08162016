@@ -1,4 +1,4 @@
-# Welcome to the Front-End Web Development Bootcamp!
+# Welcome to the React and Flux/Redux Class!
 
 ## Instructor
 
@@ -7,7 +7,7 @@ Eric Greene - [http://t4d.io](http://t4d.io) - [LinkedIn](https://www.linkedin.c
 ## Schedule
 
 Class:
-- Monday - Friday: 9am to 5pm
+- Tuesday - Thursday: 9am to 5pm
 
 Breaks:
 - Morning: 10:25am to 10:35am
