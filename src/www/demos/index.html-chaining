@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>React/Flux/Redux/Relay/GraphQL Starter Project!!!</title>
+	</head>
+
+	<body>
+		<main></main>
+		<script>
+
+			// try {
+
+			// 	setTimeout(function() {
+			// 		throw Error('test');
+			// 	}, 2000);
+
+			// } catch(err) {
+			// 	console.log('handled error');
+			// 	console.log(err);
+			// }
+
+			// undefined = resolved
+			// any other value (except for a Promise object) = resolved
+			// promise = ?
+			// throw Error = rejected
+			// Promise.reject() = rejected
+
+
+			const p = new Promise(function(resolve, reject) {
+				setTimeout(function() { resolve('data'); }, 2000);
+			});
+
+			p.then(function(results) {
+				console.log(results);
+				console.log('resolved');
+				//throw Error('tejas')
+				//return 'gaby';
+
+				return new Promise(function(resolve, reject) {
+					setTimeout(() => resolve('jamir'), 3000);
+				});
+
+			}).then(function(results) {
+				console.log(results);
+				console.log('second promise');
+			}).then(function() {
+				console.log('third promise');
+			}).catch(function(results) {
+				console.log(results);
+				console.log('rejected');
+			});
+
+			console.log('made it here');
+
+
+		</script>
+	</body>
+
+</html>

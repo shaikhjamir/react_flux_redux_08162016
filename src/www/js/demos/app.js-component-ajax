@@ -1,0 +1,36 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+class WidgetNameListComponent extends React.Component {
+
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			widgets: []
+		};
+	}
+
+	componentDidMount() {
+
+		this.props.widgets.then(widgets => {
+
+			this.setState({
+				widgets: widgets
+			});
+
+		});
+
+	}
+
+	render() {
+		return <ul>
+			{this.state.widgets.map(widget => <li key={widget._id}>{widget.name}</li>)}
+		</ul>;
+	}
+}
+
+ReactDOM.render(<WidgetNameListComponent widgets={fetch('/api/widgets').then(res => res.json())} />, document.querySelector('main'));
+
+// fetch('/api/widgets').then(res => res.json()).then(widgets =>
+// 	ReactDOM.render(<WidgetNameListComponent widgets={widgets} />, document.querySelector('main')));
